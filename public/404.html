@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>SIAM — Digital Creative</title>
+    <script type="text/javascript">
+      // Redirect 404 on GitHub Pages to HashRouter
+      var pathSegmentsToKeep = 0;
+      var l = window.location;
+      var cleanPath = l.pathname.slice(1);
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        (l.pathname.endsWith('/') ? l.pathname : l.pathname.substring(0, l.pathname.lastIndexOf('/') + 1)) +
+        '#/' + (cleanPath.startsWith('resume/') ? cleanPath.substring(7) : cleanPath) +
+        (l.search ? '&' + l.search.slice(1) : '') +
+        l.hash
+      );
+    </script>
+  </head>
+  <body>
+    Redirecting...
+  </body>
+</html>
